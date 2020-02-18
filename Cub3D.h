@@ -6,7 +6,7 @@
 /*   By: mahoang <mahoang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 20:21:25 by mahoang           #+#    #+#             */
-/*   Updated: 2020/02/13 17:25:50 by mahoang          ###   ########.fr       */
+/*   Updated: 2020/02/18 01:28:22 by mahoang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
-//# include "/printf/ft_printf.h"
+
+int		check_arg(char *text, char *cmp);
+int		print_error(int error);
 
 #endif
