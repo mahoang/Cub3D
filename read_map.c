@@ -1,44 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_error.c                                      :+:      :+:    :+:   */
+/*   read_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahoang <mahoang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/18 00:33:06 by mahoang           #+#    #+#             */
-/*   Updated: 2020/02/18 03:30:58 by mahoang          ###   ########.fr       */
+/*   Created: 2020/02/18 03:23:51 by mahoang           #+#    #+#             */
+/*   Updated: 2020/03/03 18:15:59 by mahoang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-int		check_arg(char *text, char *cmp)
+int		read_map(t_glo *s_glo, char *map)
 {
-	int c;
-	int d;
+	int		ret;
+	int		fd;
+	char	*line;
 
-	c = 0;
-	d = 0;
-	while (text[c] != '\0' && cmp[d] != '\0')
+
+	fd = open(map, O_RDONLY);
+	if (fd == -1)
+		print_error(2);
+	while (ret == 1)
 	{
-		if (text[c] != cmp[d])
-			c++;
-		while (text[c] != '\0' && cmp[d] != '\0' && text[c] == cmp[d])
-		{
-			d++;
-			c++;
-			if (cmp[d] == '\0')
-				return (1);
-		}
+		ret = get_next_line(fd, &line);
+		if (ft)
 	}
-	return (0);
 }
 
-int		print_error(int error)
+int		map_check(t_glo *s_glo, char **line)
 {
-	if (error == 1)
-		printf("Error: Invalid arguments");
-	if (error == 2)
-		printf("Error: Invalid map file");
-	return (0);
+	int i;
+	int j;
+
+	if (s_glo->map_data.map[i++][j] == '\n')
+	if (ft_strlen(s_glo->t_map.map[i][j]))
+
+
 }
